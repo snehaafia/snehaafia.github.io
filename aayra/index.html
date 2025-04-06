@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>She is growing up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+   <h1>❤She is growing up!❤</h1>
+     <h2>❤ we love you ❤</h2>
+
+    <p>
+        This is your second birthday since we started this beautiful journey together, and even though I can't be with you, holding your hand, and watching your face light up with joy.
+    </p>
+
+    <!-- Timer Display -->
+    <h2>
+        <div id="timer">she is with us for 00 days, 00 hours, 00 minutes, and 00 seconds</div>
+    </h2>
+
+    
+    <div id="gallery">
+        <img src="aayraa1.jpg" alt="Memory 1">
+        <img src="aayraa2.jpg" alt="Memory 2">
+        <img src="aayraa3.jpg" alt="Memory 3">
+        <img src="aayraa4.jpg" alt="Memory 4">
+        <img src="aayraa5.jpg" alt="Memory 5">
+        <img src="aayraa6.jpg" alt="Memory 6">
+    </div>
+   
+    <p>Some of our many to-come memories together</p>
+    <div id="timer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <script>
+        function celebrate() {
+            const messageBoxes = document.querySelectorAll('.message-box');
+            messageBoxes.forEach(box => box.style.display = 'block');
+
+            confetti({
+                particleCount: 200,
+                spread: 160,
+                origin: { y: 0.6 }
+            });
+        }
+
+        const startDate = new Date(2024, 0o3, 20, 0o3, 20, 0o0);
+        const timerElement = document.getElementById('timer');
+
+        function updateTimer() {
+            const now = new Date();
+            const difference = now - startDate;
+
+            const days = Math.floor(difference /(1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            timerElement.innerText = `she is with us for ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`;
+        }
+
+        setInterval(updateTimer, 1000);
+    </script>
+   
+
+    
+        </body>
+</html>
