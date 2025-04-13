@@ -1,56 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>She is growing up</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css">
+  <title>She's growing up!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+      overflow: hidden; 
+    }
+    h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4em;
+    color: skyblue;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #555;
+    font-weight: 300;
+}
+    /* Message Box Styles */
+    .message-box {
+      background-color: #fff;
+      border: 2px solid #d4af37;
+      padding: 20px;
+      margin: 20px auto;
+      width: 50%;
+      border-radius: 8px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      display: none; /* Messages are hidden initially */
+      font-size: 1.1em;
+    }
+    /* Photo Gallery Styles */
+    #photo-gallery img {
+      width: 180px;
+      margin: 10px;
+      border-radius: 8px;
+      border: 2px solid #d4af37;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+    }
+    /* Button Styles */
+    button {
+      background-color: #d4af37;
+      color: #fff;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.2em;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #b39430;
+    }
+    /* Timer Box Styles */
+#timer {
+    background-color: #f4f4f4;
+    color: #555;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+    /* Confetti Canvas Styles */
+    #confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; 
+    }
+  </style>
 </head>
 <body>
+    <audio autoplay loop>
+        <source src="Jonmodin.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
-   <h1>❤She is growing up!❤</h1>
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Title -->
+  <h1>❤She is growing up!❤</h1>
      <h2>❤ we love you ❤</h2>
 
-    <p>
-        This is your second birthday since we started this beautiful journey together, and even though I can't be with you, holding your hand, and watching your face light up with joy.
-    </p>
+  <!-- Subtitle -->
+  <h2>Happy 1st Birthday, my sunshine.
+    <br>
+    Mama loves you in ways words will never be enough for.</h2> 
 
-    <!-- Timer Display -->
-    <h2>
-        <div id="timer">she is with us for 00 days, 00 hours, 00 minutes, and 00 seconds</div>
-    </h2>
-
-    
-    <div id="gallery">
-        <img src="aayraa1.jpg" alt="Memory 1">
-        <img src="aayraa2.jpg" alt="Memory 2">
-        <img src="aayraa3.jpg" alt="Memory 3">
-        <img src="aayraa4.jpg" alt="Memory 4">
-        <img src="aayraa5.jpg" alt="Memory 5">
-        <img src="aayraa6.jpg" alt="Memory 6">
-    </div>
-   
-    <p>Some of our many to-come memories together</p>
+  <!-- Timer Display -->
+  <h2>
     <div id="timer"></div>
+  </h2>
 
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <!-- Photo Gallery -->
+  <div id="photo-gallery">
+    <img src="media/aayra2.jpg">
+    <img src="media/aayra3.jpg">
+    <img src="media/aayra4.jpg">
+    <img src="media/aayra5.jpg">
+    <img src="media/aayra6.jpg">
+    <img src="media/aayra7.jpg">
+    <img src="media/aayra8.jpg">
+    <img src="media/aayra1.jpg">
+    <img src="media/aayra9.jpg">
+    <img src="media/aayra11.jpg">
+  </div>
+  <p>Some of our many to-come memories together</p>
 
-    <script>
-        function celebrate() {
-            const messageBoxes = document.querySelectorAll('.message-box');
-            messageBoxes.forEach(box => box.style.display = 'block');
+  <!-- Message Boxes -->
+  <div class="message-box"> 
+    <h2>You Are My Baby, My Blessing, My Forever ❤</h2>
+  </div>
 
-            confetti({
-                particleCount: 200,
-                spread: 160,
-                origin: { y: 0.6 }
-            });
-        }
+  <div class="message-box"> 
+    <h2>My precious little girl,</h2>
+    <p>A year ago, you came into our life like a prayer whispered in the dark
+      <br>    —answered by Allah with love and light.</p>
+  </div>
 
-        const startDate = new Date(2024, 0o3, 20, 0o3, 20, 0o0);
-        const timerElement = document.getElementById('timer');
+  <div class="message-box"> 
+    <h2>You changed everything!</h2>
+    <p>You turned our days into dreams, and my heart into a home only you could fill.</p>
+  </div>
+
+  <div class="message-box"> 
+    <h2>My jaanbaccha</h2>
+    <p>May Allah hold your hand when I can't, protect you always, and surround your heart with love and light—always.</p>
+  </div>
+
+  <div class="message-box"> 
+    <p>May she walk in the footsteps of Maryam, with haya in her soul and sabr in her heart.
+      <br>
+      May Allah hold your hand when I can’t, May he protect you always, my jaan baccha. 
+      <br>
+      May He write your story with joy and let your heart always be surrounded by warmth and love.
+    </p>
+  </div>
+  
+
+
+
+
+
+
+
+  <p>Feel free to click the celebrate button as many times as you want for confetti!</p>
+  
+  <!-- Celebrate Button -->
+  <button onclick="celebrate()">Celebrate!</button> 
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script> 
+  <script>
+    function celebrate() {
+      const messageBoxes = document.querySelectorAll('.message-box');
+      messageBoxes.forEach(box => box.style.display = 'block');
+      confetti({
+        particleCount: 200,
+        spread: 160,
+        origin: { y: 0.6 }
+      });
+    }
+
+    const startDate = new Date(2024, 0o3, 20, 0o3, 20, 0o0);
+    const timerElement = document.getElementById('timer');
 
         function updateTimer() {
             const now = new Date();
@@ -61,13 +182,13 @@
             const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-            timerElement.innerText = `she is with us for ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`;
+            timerElement.innerText = `She is with us for ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`;
         }
 
         setInterval(updateTimer, 1000);
-    </script>
-   
 
-    
-        </body>
+    document.body.style.overflowY = 'auto';
+  </script>
+
+</body>
 </html>
