@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>crate memory</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #fff5f7;
+    text-align: center;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background: pink;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card {
+    background: white;
+    width: 300px;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+</style>
+
+</head>
+
+<body>
+
+<h1></h1> Wishes for Subhana</h1>
+
+<!-- ✍️ INPUT -->
+<h3>Write a Wish</h3>
+
+<input id="name" placeholder="who are you to subhana?huh?"><br><br>
+
+<textarea id="message" placeholder="lets wish!!!"></textarea><br><br>
+
+<button onclick="addWish()">yeeee done</button>
+
+<hr>
+
+<!-- 📜 LIST -->
+<div id="list"></div>
+
+<script src="script.js"></script>
+
+<script>
+showWishes();
+</script>
+
+</body>
+</html>
